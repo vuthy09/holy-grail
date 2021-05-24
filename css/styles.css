@@ -1,0 +1,144 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+:root{
+    --mainFont: "lora", sans-serif;
+    --primaryColor: #05bae6;
+    --secondaryColor: #db008d;
+    --mainGray: #e5e5e5;
+    --mainWhite: #fff;
+    --mainBlack: #000;
+}
+
+img{
+    max-width: 100%;
+}
+
+p{
+    line-height: 2;
+}
+body {
+    font-family: var(--mainFont);
+    font-size: 1.2rem;
+}
+
+.site-header{
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-header img{
+    max-width: 80%;
+}
+
+.main-menu {
+    background: var(--primaryColor);
+    padding: 1rem 0;
+}
+
+.main-menu ul{
+    max-width: 800px;
+    margin: 0 auto;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+}
+
+.main-menu ul li a{
+    text-decoration: none;
+    color: var(--mainWhite);
+    font-size: 1.4rem;
+    transition: color .3s ease-in;
+}
+
+.main-menu ul li a:hover{
+    color:var(--secondaryColor);
+}
+
+.main-menu ul li{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.main-menu ul li:last-of-type{
+    margin-bottom: 0;
+}
+
+@media screen and (min-width:768px){
+    .main-menu ul{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .main-menu ul li{
+        margin-bottom: 0;
+    }
+}
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-content,
+.sidebar{
+    flex: 0 0 100%
+}
+
+@media screen and (min-width:768px){
+    .main-content{
+        order: 1;
+        flex: 0 0 70%;
+    }
+    .sidebar{
+        flex: 0 0 30%;
+    }
+}
+
+.sidebar{
+    background: var(--mainGray);
+    padding: 2rem;
+}
+
+.sidebar ul{
+    list-style: none;
+}
+
+.sidebar ul li{
+    margin-bottom: 0.8rem;
+}
+
+.sidebar ul li:last-of-type{
+    margin-bottom: 0;
+}
+
+.sidebar ul li a{
+    text-decoration: none;
+    color: var(--mainBlack);
+    transition: color .3s ease-in;
+}
+
+.sidebar ul li a:hover{
+    color: var(--secondaryColor);
+}
+
+.main-content{
+    padding: 2rem;
+}
+
+.site-footer{
+    background: var(--secondaryColor);
+}
+
+.site-footer p{
+    margin: 0;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--mainWhite);
+}
